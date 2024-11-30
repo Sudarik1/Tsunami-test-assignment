@@ -1,0 +1,14 @@
+body{
+  font-family: 'Roboto', sans-serif;
+  
+  margin: 0;
+  
+  text-align: left;
+  color: #6d6dff;
+}
+
+button{
+  border: none;
+
+  color: inherit;
+}
