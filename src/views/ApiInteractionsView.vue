@@ -8,7 +8,7 @@
       v-model="contact.name" 
       placeholder="Иванов Иван Иванович" 
       required type="text" 
-      pattern="^[a-zA-Zа-яА-ЯёЁ\s'-]+$"
+      pattern="^[a-zA-Zа-яА-ЯёЁ\s'\-]+$"
       />
       <label class="form__label">Email <span class="form--asterisk-blue">*</span></label>
       <input class="form__input" 
@@ -60,7 +60,7 @@ const handleSubmit = async () => {
     }
   } else {
     const newContact = { ...contact.value, id: Date.now() };
-    const response = await axios.post('https://jsonplaceholder.typicode.com/users', newContact);
+    const response = await axios.post('/api/contacts', newContact);
     globalState.value.push(response.data);
   }
   router.push('/');

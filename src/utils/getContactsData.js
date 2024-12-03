@@ -2,7 +2,7 @@ import axios from 'axios';
 
 export const getContactsData = async () => {
   try {
-    const response = await axios.get('https://jsonplaceholder.typicode.com/users');
+    const response = await axios.get('/api/contacts');
     return response.data.map((user) => ({
       id: user.id,
       name: user.name,
